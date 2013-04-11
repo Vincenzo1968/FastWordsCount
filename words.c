@@ -1,3 +1,23 @@
+/*
+   Copyright (C) 2013 Vincenzo Lo Cicero
+
+   Author: Vincenzo Lo Cicero.
+   e-mail: vincenzo.locicero@live.it
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 /* gcc -Wall -W -std=c99 -O3 -funroll-loops words.c -o words */
 /* gcc -Wall -W -std=c99 -O3 -funroll-loops -static words.c -o words */
 
@@ -208,6 +228,27 @@ void ExtractFileName(const char *szPathName, char *szFileName)
 	szFileName[x] = '\0';
 }
 
+void showMessage()
+{
+   printf("Copyright (C) 2013 Vincenzo Lo Cicero\n");
+
+   printf("\nAuthor: Vincenzo Lo Cicero.\n");
+   printf("e-mail: vincenzo.locicero@live.it\n");
+
+   printf("\nThis program is free software: you can redistribute it and/or modify\n");
+   printf("it under the terms of the GNU General Public License as published by\n");
+   printf("the Free Software Foundation, either version 3 of the License, or\n");
+   printf("(at your option) any later version.\n");
+
+   printf("\nThis program is distributed in the hope that it will be useful,\n");
+   printf("but WITHOUT ANY WARRANTY; without even the implied warranty of\n");
+   printf("MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n");
+   printf("GNU General Public License for more details.\n");
+
+   printf("You should have received a copy of the GNU General Public License\n");
+   printf("along with this program.  If not, see <http://www.gnu.org/licenses/>.\n");	
+}
+
 int main(int argc, char* argv[])
 {
 	FindRec myFindRec;
@@ -223,6 +264,8 @@ int main(int argc, char* argv[])
 		ExtractFileName(argv[0], szExeName);
 		PrintHelp(szExeName);
 #endif
+
+	showMessage();
 
 		return -1;
 	}
